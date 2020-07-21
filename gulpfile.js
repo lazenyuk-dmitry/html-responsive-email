@@ -11,6 +11,12 @@ const env = {
   ...process.env,
 };
 
+const mjmlConfig = {
+  minify: true, 
+  fileExt: '.html', 
+  validationLevel: 'strict',
+}
+
 function devServer() {
   return browserSync.init({
     server: {
@@ -48,7 +54,7 @@ function clean() {
 function buildEmails() {
   return gulp.src('./src/pages/**.mjml')
     .pipe(injectEnvs(env))
-    .pipe(mjml(mjmlEngine, {minify: false, fileExt: ".html", validationLevel: 'strict'}))
+    .pipe(mjml(mjmlEngine, mjmlConfig))
     .pipe(gulp.dest('./dist'))
 }
 
