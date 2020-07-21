@@ -10,14 +10,14 @@ For development run command `npm run dev`
 mjml doc: https://mjml.io/documentation/
 
 ###Env injection. <br>
-You can inject env variables into templates
-https://www.npmjs.com/package/gulp-inject-envs
-Example
-Assets path `env ASSETS_PATH='...'` 
-Available like `<ENV::ASSETS_PATH>`
+You can inject env variables into templates <br>
+https://www.npmjs.com/package/gulp-inject-envs <br>
+Example <br>
+Assets path `env ASSETS_PATH='...'` <br> 
+Available like `<ENV::ASSETS_PATH>` <br>
 
-###File and directories.
-`dist` - build output directory and server root. 
-`src/assets` - assets directory.
-`src/components` - mjml templates for include https://mjml.io/documentation/#mj-include.
-`src/pages` - email pages.
+###File and directories. <br>
+`dist` - build output directory and server root.  <br>
+`src/assets` - assets directory. <br>
+`src/components` - mjml templates for include https://mjml.io/documentation/#mj-include. <br>
+`src/pages` - email pages. <br>
