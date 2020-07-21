@@ -1,0 +1,25 @@
+{
+  "name": "mjml-email-builder",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "env ASSETS_PATH=/assets ./node_modules/.bin/gulp build",
+    "dev": "env ASSETS_PATH=/assets ./node_modules/.bin/gulp dev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp-clean": "^0.4.0",
+    "gulp-inject-envs": "^1.1.1",
+    "gulp-mjml": "^4.0.2",
+    "mjml": "^4.6.3"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-notify": "^3.2.0",
+    "gulp-plumber": "^1.2.1"
+  }
+}
