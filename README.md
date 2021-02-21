@@ -7,7 +7,11 @@ Made with [mjml](https://mjml.io/) and gulp.
 For build run command `npm run build` <br>
 For development run command `npm run dev`
 
+Better to use vscode with a plugin MJML. This will provide syntax highlighting and autocomplete and will display errors as well.
+https://github.com/mjmlio/vscode-mjml
+
 mjml doc: https://mjml.io/documentation/
+mjml plugins for text editor: https://documentation.mjml.io/#applications-and-plugins
 
 ### Env injection.
 You can inject env variables into templates <br>
