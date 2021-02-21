@@ -4,18 +4,18 @@
   "description": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "env ASSETS_PATH=/assets ./node_modules/.bin/gulp build",
-    "dev": "env ASSETS_PATH=/assets ./node_modules/.bin/gulp dev"
+    "dev": "env ASSETS_PATH=/assets NODE_ENV=development ./node_modules/.bin/gulp dev",
+    "build": "env ASSETS_PATH=/assets NODE_ENV=production ./node_modules/.bin/gulp build"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "browser-sync": "^2.26.7",
+    "browser-sync": "^2.26.14",
     "gulp-clean": "^0.4.0",
     "gulp-inject-envs": "^1.1.1",
     "gulp-mjml": "^4.0.2",
-    "mjml": "^4.6.3"
+    "mjml": "^4.8.1"
   },
   "devDependencies": {
     "gulp": "^4.0.2",

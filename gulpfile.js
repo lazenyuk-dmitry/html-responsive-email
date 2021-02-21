@@ -11,8 +11,10 @@ const env = {
   ...process.env,
 };
 
+const isDevelopment = env.NODE_ENV === 'development';
+
 const mjmlConfig = {
-  minify: true, 
+  minify: !isDevelopment,
   fileExt: '.html', 
   validationLevel: 'strict',
 }
@@ -37,8 +39,6 @@ function handleError (err) {
     message:  "<%= error.message %>",
     sound:    "Beep"
   })(err);
-
-  this.emit('end');
 }
 
 function copy() {
@@ -54,7 +54,7 @@ function clean() {
 function buildEmails() {
   return gulp.src('./src/pages/**.mjml')
     .pipe(injectEnvs(env))
-    .pipe(mjml(mjmlEngine, mjmlConfig))
+    .pipe(mjml(mjmlEngine, mjmlConfig).on('error', (e) => handleError(e)))
     .pipe(gulp.dest('./dist'))
 }
 
