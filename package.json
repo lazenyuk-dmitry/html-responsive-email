@@ -15,7 +15,7 @@
     "gulp-clean": "^0.4.0",
     "gulp-inject-envs": "^1.2.0",
     "gulp-mjml": "^4.0.2",
-    "mjml": "^4.8.1"
+    "mjml": "^4.13.0"
   },
   "devDependencies": {
     "gulp": "^4.0.2",
