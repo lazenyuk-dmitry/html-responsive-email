@@ -3,7 +3,7 @@ README
 Made with [mjml](https://mjml.io/) and gulp.
 ----------------------------------------------------------------------------------
 
-
+For install all dependencies run command `npm run install` <br>
 For build run command `npm run build` <br>
 For development run command `npm run dev`
 
