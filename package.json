@@ -1,14 +1,14 @@
 {
-  "name": "mjml-email-builder",
+  "name": "htm-responsive-email",
   "version": "1.0.0",
-  "description": "",
+  "description": "Makes responsive-email easy",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "cross-env ASSETS_PATH=/assets NODE_ENV=development ./node_modules/.bin/gulp dev",
     "build": "cross-env ASSETS_PATH=/assets NODE_ENV=production ./node_modules/.bin/gulp build"
   },
   "keywords": [],
-  "author": "",
+  "author": "Dmitry Lazenyuk <lazenyukdima@gmail.com> (https://github.com/lazenyuk-dmitry)",
   "license": "ISC",
   "dependencies": {
     "browser-sync": "^2.27.11",
