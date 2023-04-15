@@ -1,27 +1,47 @@
-README
-==================================================================================
-Made with [mjml](https://mjml.io/) and gulp.
-----------------------------------------------------------------------------------
+# Html Responsive Email Boilerplate
 
-For install all dependencies run command `npm run install` <br>
-For build run command `npm run build` <br>
-For development run command `npm run dev`
+[![Russian Federation](https://raw.githubusercontent.com/stevenrskelton/flag-icon/master/png/16/country-4x3/ru.png "Russian Federation") Russian README](README_RU.md)
 
-Better to use vscode with a plugin MJML. This will provide syntax highlighting and autocomplete and will display errors as well.
-https://github.com/mjmlio/vscode-mjml
+This is a starter boilerplate for a simple layout of responsive emails based on **[MJML](https://mjml.io/)** and **Gulp**.
 
-mjml doc: https://mjml.io/documentation/
-mjml plugins for text editor: https://documentation.mjml.io/#applications-and-plugins
+Possibilities:
 
-### Env injection.
-You can inject env variables into templates <br>
-https://www.npmjs.com/package/gulp-inject-envs <br>
-Example <br>
-Assets path already set `env ASSETS_PATH=/assets` <br> 
-Available in templates like `<ENV::ASSETS_PATH>` <br>
+- Develop emails using the **MJML** framework in the code editor using **Gulp**.
+- Using environment variables. For example, to load local images during development and replace asset paths during build with remote resources.
 
-### File and directories.
-`dist` - build output directory and server root.  <br>
-`src/assets` - assets directory. <br>
-`src/components` - mjml templates for include https://mjml.io/documentation/#mj-include. <br>
-`src/pages` - email pages. <br>
+[See documentation](#documentation).
+
+## Editor and plugins
+
+Recommended to use **[Visual Studio Code](https://code.visualstudio.com/Download)** + **[MJML Plugin](https://marketplace.visualstudio.com/items?itemName=attilabuti.vscode- mjml)**
+
+## Get started
+
+- `npm run install` - to install all dependencies.
+- `npm run dev` - to develop and run a server with hot reload.
+- `npm run build` - to build all emails and minify the code.
+
+## Documentation
+
+Framework documentation of **[MJML here](https://mjml.io/documentation/)**
+  
+### ENV Injection
+
+You can embed env variables in templates. The plugin **[gulp-inject-envs](https://www.npmjs.com/package/gulp-inject-envs)** is used.
+
+Example:
+
+- Path to resources, already set as `env ASSETS_PATH=/assets`, see [package.json](package.json) `build` and `dev` scripts. you can set different variables for different environments.
+- Available in templates like `<ENV::ASSETS_PATH>`.
+   For example:
+
+   ``` Html
+     <img src="<ENV::ASSETS_PATH>/logo.png" alt="Logo">
+   ```
+
+## Recommended directory structure
+
+- `dist` - build output directory and server root.
+- `src/assets` - resources directory.
+- `src/components` - *MJML* templates to include. [Documentation](https://mjml.io/documentation/#mj-include).
+- `src/pages` - e-mail pages.
