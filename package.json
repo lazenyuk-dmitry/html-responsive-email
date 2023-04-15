@@ -4,8 +4,8 @@
   "description": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "env ASSETS_PATH=/assets NODE_ENV=development ./node_modules/.bin/gulp dev",
-    "build": "env ASSETS_PATH=/assets NODE_ENV=production ./node_modules/.bin/gulp build"
+    "dev": "cross-env ASSETS_PATH=/assets NODE_ENV=development ./node_modules/.bin/gulp dev",
+    "build": "cross-env ASSETS_PATH=/assets NODE_ENV=production ./node_modules/.bin/gulp build"
   },
   "keywords": [],
   "author": "",
@@ -15,9 +15,10 @@
     "gulp-clean": "^0.4.0",
     "gulp-inject-envs": "^1.2.0",
     "gulp-mjml": "^4.0.2",
-    "mjml": "^4.13.0"
+    "mjml": "^4.14.1"
   },
   "devDependencies": {
+    "cross-env": "^7.0.3",
     "gulp": "^4.0.2",
     "gulp-notify": "^4.0.0",
     "gulp-plumber": "^1.2.1"
