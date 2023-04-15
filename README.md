@@ -13,7 +13,7 @@ Possibilities:
 
 ## Editor and plugins
 
-Recommended to use **[Visual Studio Code](https://code.visualstudio.com/Download)** + **[MJML Plugin](https://marketplace.visualstudio.com/items?itemName=attilabuti.vscode- mjml)**
+Recommended to use **[Visual Studio Code](https://code.visualstudio.com/Download)** + **[MJML Plugin](https://marketplace.visualstudio.com/items?itemName=attilabuti.vscode-mjml)**
 
 ## Get started
 
