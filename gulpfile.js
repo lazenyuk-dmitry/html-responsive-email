@@ -19,6 +19,8 @@ const mjmlConfig = {
   validationLevel: 'strict',
 }
 
+notify.logLevel(0);
+
 function devServer() {
   return browserSync.init({
     server: {
@@ -28,17 +30,19 @@ function devServer() {
     ui: false,
     open: false,
     watch: true,
-    logLevel: 'debug',
+    logLevel: 'info',
   });
 }
 
 function handleError (err) {
   notify.onError({
     title:    "Gulp",
-    subtitle: "Failure!",
+    subtitle: "Error!",
     message:  "<%= error.message %>",
-    sound:    "Beep"
+    sound:    "Beep",
   })(err);
+
+  return err;
 }
 
 function copy() {
@@ -54,14 +58,14 @@ function clean() {
 function buildEmails() {
   return gulp.src('./src/pages/**.mjml')
     .pipe(injectEnvs(env))
-    .pipe(mjml(mjmlEngine, mjmlConfig).on('error', (e) => handleError(e)))
+    .pipe(mjml(mjmlEngine, mjmlConfig))
     .pipe(gulp.dest('./dist'))
 }
 
 function watch() {
   devServer();
-  gulp.watch('./src/**/**.mjml', gulp.series(buildEmails));
-  gulp.watch('./src/assets', gulp.series(copy));
+  gulp.watch('./src/**/**.mjml', gulp.series(buildEmails)).on("error", handleError);
+  gulp.watch('./src/assets', gulp.series(copy)).on("error", handleError);
 }
 
 exports.build = gulp.series(clean, copy, buildEmails);
