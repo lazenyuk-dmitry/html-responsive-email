@@ -4,9 +4,10 @@
 
 This is a starter boilerplate for a simple layout of responsive emails based on **[MJML](https://mjml.io/)** and **Gulp**.
 
-Possibilities:
+Features:
 
 - Develop emails using the **MJML** framework in the code editor using **Gulp**.
+- Check templates for errors.
 - Using environment variables. For example, to load local images during development and replace asset paths during build with remote resources.
 
 [See documentation](#documentation).
